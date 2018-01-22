@@ -1681,7 +1681,7 @@ Link Download: "+idU.id+"\n";
             for (var i = 0; i < listMember.length; i++) {
                 if(listMember[i].mid==param){
 					let namanya = listMember[i].dn;
-					seq.text = 'Halo @'+namanya+', Selamat datang bro ! Salam Kenal ^_^';
+					seq.text = 'สวัสดี @'+namanya+', ยินดีต้อนรับสมาชิกใหม่ ^_^';
 					let midnya = listMember[i].mid;
 					let kata = seq.text.split("@").slice(0,1);
 					let kata2 = kata[0].split("");
@@ -1703,9 +1703,9 @@ Link Download: "+idU.id+"\n";
             }
         }
 		
-		if(txt == "!tagall" && seq.toType == 2 && !isBanned(banList, seq.from_)){
+		if(txt == "tag" && seq.toType == 2 && !isBanned(banList, seq.from_)){
 			await this.tagAlls(seq);
-		}else if(txt == '!tagall' && isBanned(banList, seq.from_)){this._sendMessage(seq,"Not permitted !");}
+		}else if(txt == 'tag' && isBanned(banList, seq.from_)){this._sendMessage(seq,"Not permitted !");}
 		
 		if(txt == '0103' && lockt == 1){
 			let ax = await this._client.getGroup(seq.to);
